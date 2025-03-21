@@ -1,4 +1,6 @@
 Distributed File System (DFS) with Fault Tolerance
+Contributors License
+
 Overview
 This project implements a Distributed File System (DFS) with Fault Tolerance using Python, C++, gRPC, and PostgreSQL. The system supports file chunking, replication, inter-node communication, and monitoring. It is designed to be scalable, resilient, and efficient.
 
@@ -16,6 +18,8 @@ RPC Framework: gRPC
 Monitoring Tools: Prometheus & Grafana
 Development Environment: WSL (Windows Subsystem for Linux) or native Linux
 System Architecture
+Architecture Diagram
+
 Client sends file upload/download requests.
 Metadata Server tracks file chunks and node locations.
 Storage Nodes store chunks and replicate them for fault tolerance.
@@ -52,6 +56,11 @@ Download a File:
 python client/dfs_client.py --download file.txt
 Monitor Performance:
 prometheus & grafana-server
+Troubleshooting
+gRPC Import Errors: Ensure grpcio and grpcio-tools are installed:
+pip install grpcio grpcio-tools
+PostgreSQL Connection Issues: Check if PostgreSQL is running and accessible:
+sudo systemctl status postgresql
 Roadmap
 Implement access control and authentication.
 Optimize chunk placement algorithms.
@@ -63,10 +72,7 @@ Contributions are welcome! Please open an issue or submit a pull request.
 License
 This project is licensed under the MIT License.
 
-Author
+Contributors
 Suyash Pundir
-
 Bhavesh Rajput
-
 Shaurya Singh
-
